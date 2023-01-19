@@ -17,7 +17,7 @@ actor {
        Nat.pow(x,3);
     };
 
-    public func hours_to_minutes(n : Nat) : async Nat {
+    public func hoursToMinutes(n : Nat) : async Nat {
         Nat.mul(n,60);
     };
 
@@ -28,11 +28,11 @@ actor {
 
     };
 
-    public query func get_counter() : async Nat {
+    public query func getCounter() : async Nat {
         myCounter;
     };
 
-    public func test_divide(n : Nat, m: Nat) : async Bool {        
+    public func testDivide(n : Nat, m: Nat) : async Bool {        
         if(n > m and m != 0){
             true;
         } else {
@@ -40,7 +40,7 @@ actor {
         };
     };
 
-    public func is_even(n : Nat) : async Bool {
+    public func isEven(n : Nat) : async Bool {
         let res = Nat.rem(n,2);
 
         if(res == 0){
