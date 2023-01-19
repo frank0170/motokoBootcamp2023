@@ -68,6 +68,16 @@ actor {
     return i;
   };
 
+  public func find_duplicates(myArray : [Nat]) : async [Nat] {
+    var array = [var 0];
+    for (curNat in myArray.vals()) {
+      var arrDuplicates : [Nat] = Array.filter<Nat>(myArray, func x = x == curNat );
+      var arrVarDuplicates = Array.thaw<Nat>(arrDuplicates);
+      array := arrVarDuplicates;
+    };
+    return Array.freeze<Nat>(array);
+  };
+
   public query func convert_to_binary(n : Int) : async Text {
     var binary : Text = "" ;
     var num : Int = n ;
