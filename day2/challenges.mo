@@ -68,16 +68,16 @@ actor {
     return i;
   };
 
-  public func convert_to_binary(n : Int) : async Text {
+  public query func convert_to_binary(n : Int) : async Text {
     var binary : Text = "" ;
     var num : Int = n ;
     while (num > 0) {
       if (num % 2 == 0) {
-        binary = "0" + binary;
+        binary := "0" # binary;
       } else {
-        binary = "1" + binary;
+        binary := "1" # binary;
       };
-      num = num / 2;
+      num := num / 2;
     };
     return binary;
   };
