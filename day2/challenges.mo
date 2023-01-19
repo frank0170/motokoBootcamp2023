@@ -5,9 +5,9 @@ import Text "mo:base/Text";
 import Iter "mo:base/Iter";
 
 actor {
+
   let n : Nat = 50;
   let t : Text = "Hello";
-
   public func convert_to_text(m : Nat) : async Text {
     Nat.toText(m);
   };
@@ -53,15 +53,33 @@ actor {
       return res;
     };
   };
-
   type Pattern = Text.Pattern;
   let pattern : Pattern = #char(' ');
+
   public func number_of_words(mySentence : Text) : async Nat {
+    let iter = Text.split(mySentence, pattern);
+    let myArray : [Text] = Iter.toArray(iter);
     var i : Nat = 0;
-    for (words in Text.split(mySentence, pattern)) {
-      i := i +1;
+    for (words in myArray.vals()) {
+      if (words != "") {
+        i := i +1;
+      };
     };
     return i;
+  };
+
+  public func convert_to_binary(n : Int) : async Text {
+    var binary : Text = "" ;
+    var num : Int = n ;
+    while (num > 0) {
+      if (num % 2 == 0) {
+        binary = "0" + binary;
+      } else {
+        binary = "1" + binary;
+      };
+      num = num / 2;
+    };
+    return binary;
   };
 
 };
