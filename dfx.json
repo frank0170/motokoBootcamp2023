@@ -1,0 +1,14 @@
+{
+    "canisters":{
+        "first_canister": {
+            "main" : "day1/challenges.mo",
+            "type":"motoko"
+        }
+    },
+    "networks": {
+        "local": {
+          "bind": "127.0.0.1:8000",
+          "type": "ephemeral"
+        }
+    }
+} 

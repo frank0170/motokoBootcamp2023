@@ -1,3 +1,5 @@
-# Motoko Bootcamp 2023 🚀
+# motokobootcamp2023
 
-<img src="https://github.com/motoko-bootcamp/motokobootcamp-2023/blob/main/poster.png" />
+ Public Repo created for Motoko Bootcamp '23
+
+https://github.com/motoko-bootcamp/motokobootcamp-2023

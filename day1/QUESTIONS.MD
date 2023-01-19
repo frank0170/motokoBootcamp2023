@@ -1,7 +1,6 @@
 # <a id="questions"> 🙋 Questions </a>
 1. How much is the current memory capacity of a canister? 
-
-**Answer 1: 48GB of stable memory**
+   A : 48Gb
 
 2. What is the issue with the following code sample?
 ```
@@ -12,9 +11,9 @@ actor {
   };
 }
 ```
-**Answer 2: The counter variable is immutable. In order to run the program we need to change it to from let to var.**
+A: let is immutable, if we want to assign new value we have to use var instead of let 
 
-1. What is the issue with the following code sample?
+3. What is the issue with the following code sample?
 ```
 actor {
   var message : Text = 0;
@@ -29,11 +28,7 @@ actor {
   };
 }
 ```
-**Answer 3:**
-* The varible message is declared as Text and assigned a value of Nat.
-* The function change_message has to be an update function not a query function.
-  
+A: You can not assign a Nat to a Text type.
 
-4.  False or True: we can remove the keyword **async** for return argument of a query function since queries are faster to answer.
-
-**Answer 4: False**
+1.  False or True: we can remove the keyword **async** for the return argument of a query function since queries are faster to answer.
+A: False
